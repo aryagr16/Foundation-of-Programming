@@ -1,18 +1,15 @@
 #include <stdio.h>
 #include <string.h>
-
 #define MAX 100
 
-// Structure definition
 struct EMPLOYEE {
     char name[50];
     char designation[50];
-    char gender;      // M/F
-    char doj[20];     // Date of Joining
+    char gender;     
+    char doj[20];    
     float salary;
 };
 
-// Function prototypes
 void totalEmployees(int n);
 void countGender(struct EMPLOYEE e[], int n);
 void salaryAbove10000(struct EMPLOYEE e[], int n);
@@ -25,7 +22,6 @@ int main() {
     printf("Enter number of employees: ");
     scanf("%d", &n);
 
-    // Input
     for(i = 0; i < n; i++) {
         printf("\nEmployee %d\n", i + 1);
 
@@ -45,7 +41,6 @@ int main() {
         scanf("%f", &e[i].salary);
     }
 
-    // Function calls
     totalEmployees(n);
     countGender(e, n);
     salaryAbove10000(e, n);
